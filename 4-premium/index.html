@@ -10,12 +10,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Небосклон: натяжные потолки в Челябинске, цена до замера">
 <meta property="og:description" content="Конфигуратор натяжного потолка со схемой и сметой, запись на замер по районам Челябинска, предоплата онлайн, рассрочка 0%. Цена в договоре не меняется.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=75&auto=format&fit=crop">
+<meta property="og:image" content="https://artemdobrovolskii1-bit.github.io/Natyazhnye-potolki/4-premium/img/1600607687939-ce8a6c25118c.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='10' fill='%232563EB'/%3E%3Ccircle cx='17' cy='24' r='3.4' fill='%23FFD9A0'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="fonts/fonts.css" rel="stylesheet">
 <!-- Яндекс Метрика: вставьте сюда код счётчика клиента -->
 <style>
 :root{--bg:#F5F8FB;--bg2:#E9F0F7;--card:#FFFFFF;--ink:#13202E;--mute:#5B6B7D;--acc:#2563EB;--acc-ink:#FFFFFF;--line:#D5DFEA;
@@ -376,7 +373,7 @@ body>*:not(#printSheet){display:none!important}
 <ul class="hero-pt"><li>Замер бесплатный</li><li>Монтаж комнаты за день</li><li>Рассрочка 0%</li></ul>
 </div>
 <div class="hero-art">
-<div class="arch"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=72&auto=format&fit=crop" width="900" height="1125" alt="Светлая гостиная с ровным потолком и встроенными светильниками" fetchpriority="high" data-ph></div>
+<div class="arch"><img src="img/1600607687939-ce8a6c25118c.jpg" width="900" height="1125" alt="Светлая гостиная с ровным потолком и встроенными светильниками" fetchpriority="high" data-ph></div>
 <div class="fl a"><span class="mute">Комната 16 м², свет, люстра</span><b>13 600 ₽</b></div>
 <div class="fl b"><span class="mute">Ближайший замер</span><b>завтра, 11:00</b></div>
 <div class="fl c"><span class="stars">★★★★★</span> 4,9 · 69 отзывов <span class="mute">(образец)</span></div>
@@ -530,7 +527,7 @@ body>*:not(#printSheet){display:none!important}
 <div class="card gc rv"><i>100 л</i><h3>воды держит метр</h3><p>Если затопят соседи, полотно не порвётся. Сольём воду и вернём потолок на место.</p></div>
 </div>
 <div class="about">
-<div class="ph rv"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=72&auto=format&fit=crop" width="900" height="563" loading="lazy" alt="Светлая гостиная с панорамными окнами и ровным белым потолком" data-ph></div>
+<div class="ph rv"><img src="img/1600210492486-724fe5c67fb0.jpg" width="900" height="563" loading="lazy" alt="Светлая гостиная с панорамными окнами и ровным белым потолком" data-ph></div>
 <div class="rv">
 <h3>«Небосклон» в двух словах</h3>
 <p class="mute">Три бригады монтажников, свой склад профиля и собственный менеджер на каждый заказ. Мы не обещаем «от 150 ₽ за метр» и не прячем доплаты, потому что в цену заложено то, что реально нужно в комнате.</p>
@@ -1076,7 +1073,7 @@ let cf='all';
 function catHtml(it,i){
   const s=merge(it),c=cfgOf(s),r=calc(c);
   const inc=['профиль '+fmt1(c.per)+' м.п.',c.spots?c.spots+' светильников':'',c.chand?'люстра':'',c.floatLen?'парящий':'',c.lineLen?'линии '+c.lineLen+' м.п.':'',c.lvl2Len?'второй уровень':'',c.pipes?'трубы '+c.pipes:'',c.curt!=='none'?'карниз':''].filter(Boolean).join(', ');
-  return '<article class="card it rv" data-i="'+i+'"><div class="ph"><img src="https://images.unsplash.com/photo-'+it.img+'?w=640&q=72&auto=format&fit=crop" width="640" height="480" loading="lazy" alt="Пример комнаты: '+esc(it.n)+'" data-ph>'+(it.badge?'<span class="bdg'+(it.badge==='Новинка'?' n':'')+'">'+it.badge+'</span>':'')+'</div><div class="bd"><span class="tg">'+TEXI[it.tex].n+' · '+ROOMS[it.room].n+'</span><h3>'+esc(it.n)+'</h3><p>'+esc(it.t)+'</p><div class="pr2"><b>'+fmt(r.total)+' ₽</b><span>пример: '+fmt1(c.area)+' м², ≈ '+fmt(r.ppm)+' ₽/м²</span></div><div class="inc">Входит: '+inc+'. Монтаж: '+it.time+'.</div><div class="ac2"><button type="button" class="btn sm" data-load="'+i+'">Собрать такой</button><a class="btn sm ghost" target="_blank" rel="noopener" href="'+waLink('Здравствуйте! Интересует потолок «'+it.n+'». Хочу узнать точную стоимость.')+'">Узнать цену</a></div></div></article>';
+  return '<article class="card it rv" data-i="'+i+'"><div class="ph"><img src="img/'+it.img+'.jpg" width="640" height="480" loading="lazy" alt="Пример комнаты: '+esc(it.n)+'" data-ph>'+(it.badge?'<span class="bdg'+(it.badge==='Новинка'?' n':'')+'">'+it.badge+'</span>':'')+'</div><div class="bd"><span class="tg">'+TEXI[it.tex].n+' · '+ROOMS[it.room].n+'</span><h3>'+esc(it.n)+'</h3><p>'+esc(it.t)+'</p><div class="pr2"><b>'+fmt(r.total)+' ₽</b><span>пример: '+fmt1(c.area)+' м², ≈ '+fmt(r.ppm)+' ₽/м²</span></div><div class="inc">Входит: '+inc+'. Монтаж: '+it.time+'.</div><div class="ac2"><button type="button" class="btn sm" data-load="'+i+'">Собрать такой</button><a class="btn sm ghost" target="_blank" rel="noopener" href="'+waLink('Здравствуйте! Интересует потолок «'+it.n+'». Хочу узнать точную стоимость.')+'">Узнать цену</a></div></div></article>';
 }
 function renderCat(){
   $('#catFil').innerHTML=FILT.map(f=>'<button type="button" class="chip" aria-pressed="'+(cf===f[0])+'" data-f="'+f[0]+'">'+f[1]+'</button>').join('');
@@ -1101,7 +1098,7 @@ const CASES=[
 function renderCases(){
   $('#cases').innerHTML=CASES.map((k,i)=>{
     const c=cfgOf(merge(k.cfg)),r=calc(c);
-    const img='https://images.unsplash.com/photo-'+k.img+'?w=800&q=72&auto=format&fit=crop';
+    const img='img/'+k.img+'.jpg';
     return '<article class="card cs rv"><div class="ba" id="ba'+i+'"><img src="'+img+'" width="800" height="500" loading="lazy" alt="После: '+esc(k.n)+'" data-ph><div class="bf"><img src="'+img+'" width="800" height="500" loading="lazy" alt="До: старый потолок в этой комнате (образец)" data-ph></div><span class="lb l">До</span><span class="lb r">После</span><span class="hd2" aria-hidden="true">↔</span><input type="range" min="2" max="98" value="50" aria-label="Сравнить потолок до и после: '+esc(k.n)+'"></div><div class="bd"><h3>'+esc(k.n)+'</h3><p class="mute" style="margin:0;font-size:.88rem">'+k.when+' · монтаж '+k.time+' · образец</p><ul>'+r.lines.map(l=>'<li><span>'+esc(l.n)+'</span><span>'+fmt(l.v)+' ₽</span></li>').join('')+'</ul><div class="sm"><b>'+fmt(r.total)+' ₽</b><span class="zero">Доплата после замера: 0 ₽</span></div></div></article>';
   }).join('');
   $$('.ba input').forEach(inp=>inp.addEventListener('input',()=>{inp.parentNode.style.setProperty('--p',inp.value+'%')}));

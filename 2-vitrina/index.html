@@ -9,10 +9,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Небосклон — натяжные потолки в Челябинске, цена до замера">
 <meta property="og:description" content="Натяжные потолки в Челябинске: каталог с ценами, расчёт комнаты за минуту, замер бесплатно. Цена фиксируется в договоре и не растёт после замера.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=72&auto=format&fit=crop">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://artemdobrovolskii1-bit.github.io/Natyazhnye-potolki/2-vitrina/img/1600607687939-ce8a6c25118c.jpg">
+<link href="fonts/fonts.css" rel="stylesheet">
 <!-- Яндекс Метрика: вставьте сюда код счётчика клиента -->
 <style>
 
@@ -360,7 +358,7 @@ footer p{margin:6px auto;max-width:70ch}
 'use strict';
 
 var REG=[];
-function photoURL(id,w){return 'https://images.unsplash.com/photo-'+id+'?w='+w+'&q=72&auto=format&fit=crop'}
+function photoURL(id,w){return 'img/'+id+'.jpg'}
 /* Иллюстрация комнаты с потолком — показывается, если фото не загрузилось */
 function roomSVG(o){
   o=o||{};var wall=o.wall||'#E3EAF2',floor=o.floor||'#C9B79C',acc=o.acc||'#6F8FB8',spots=o.spots==null?5:o.spots;
@@ -376,7 +374,7 @@ function roomSVG(o){
   return s+'</svg>';
 }
 function pic(id,cfg,alt,w,o){o=o||{};var k=REG.push(cfg||{})-1,h=Math.round(w/2),b=Math.min(2400,w*1.6|0);
-  return '<img class="ph" data-k="'+k+'" src="'+photoURL(id,w)+'" srcset="'+photoURL(id,h)+' '+h+'w, '+photoURL(id,w)+' '+w+'w, '+photoURL(id,b)+' '+b+'w" sizes="'+(o.sizes||'(max-width:760px) 100vw, 50vw')+'" alt="'+(alt||'').replace(/"/g,'&quot;')+'" '+(o.eager?'fetchpriority="high"':'loading="lazy"')+' decoding="async">'}
+  return '<img class="ph" data-k="'+k+'" src="'+photoURL(id,w)+'" alt="'+(alt||'').replace(/"/g,'&quot;')+'" '+(o.eager?'fetchpriority="high"':'loading="lazy"')+' decoding="async">'}
 document.addEventListener('error',function(e){var im=e.target;if(im&&im.tagName==='IMG'&&im.dataset.k){var d=document.createElement('div');d.className='ph';d.setAttribute('role','img');d.setAttribute('aria-label',im.alt);d.innerHTML=roomSVG(REG[im.dataset.k]);im.replaceWith(d)}},true);
 function fillMedia(el){var cfg=JSON.parse(el.getAttribute('data-room')||'{}');el.insertAdjacentHTML('afterbegin',el.dataset.photo?pic(el.dataset.photo,cfg,el.dataset.alt||'',+el.dataset.w||1000,{eager:el.hasAttribute('data-eager'),sizes:el.dataset.sizes}):roomSVG(cfg))}
 document.querySelectorAll('[data-photo]').forEach(fillMedia);
